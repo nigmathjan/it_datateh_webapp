@@ -1,0 +1,74 @@
+/*C74*/SET SCHEMA PUBLIC
+DROP TABLE IF EXISTS user
+CREATE TABLE user(\u0009id INT, \u0009name CHAR(20), \u0009pass CHAR(20), \u0009\u0009primary key(id) )
+DISCONNECT
+/*C75*/SET SCHEMA PUBLIC
+DROP TABLE IF EXISTS disk
+CREATE TABLE disk(\u0009id INT, \u0009title CHAR(50), \u0009\u0009primary key(id) )
+DISCONNECT
+/*C76*/SET SCHEMA PUBLIC
+DROP TABLE IF EXISTS takeitem
+CREATE TABLE takeitem(\u0009disk_id INT, \u0009owner_id INT, \u0009captor_id INT)
+DISCONNECT
+/*C77*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES(0,'John                ','1234                ')
+COMMIT
+INSERT INTO USER VALUES(1,'Paul                ','4321                ')
+COMMIT
+INSERT INTO USER VALUES(2,'George              ','5678                ')
+COMMIT
+INSERT INTO USER VALUES(3,'Ringo               ','8765                ')
+COMMIT
+DISCONNECT
+/*C78*/SET SCHEMA PUBLIC
+INSERT INTO DISK VALUES(0,'Please Please Me                                  ')
+COMMIT
+INSERT INTO DISK VALUES(1,'With The Beatles                                  ')
+COMMIT
+INSERT INTO DISK VALUES(2,'A Hard Day s Night                                ')
+COMMIT
+INSERT INTO DISK VALUES(3,'Beatles For Sale                                  ')
+COMMIT
+INSERT INTO DISK VALUES(4,'Help!                                             ')
+COMMIT
+INSERT INTO DISK VALUES(5,'Rubber Soul                                       ')
+COMMIT
+INSERT INTO DISK VALUES(6,'Revolver                                          ')
+COMMIT
+INSERT INTO DISK VALUES(7,'Sgt. Pepper s Lonely Hearts Band                  ')
+COMMIT
+INSERT INTO DISK VALUES(8,'The Beatles                                       ')
+COMMIT
+INSERT INTO DISK VALUES(9,'Yellow Submarine                                  ')
+COMMIT
+INSERT INTO DISK VALUES(10,'Abbey Road                                        ')
+COMMIT
+INSERT INTO DISK VALUES(11,'Let It Be                                         ')
+COMMIT
+DISCONNECT
+/*C79*/SET SCHEMA PUBLIC
+INSERT INTO TAKEITEM VALUES(0,0,0)
+COMMIT
+INSERT INTO TAKEITEM VALUES(1,0,0)
+COMMIT
+INSERT INTO TAKEITEM VALUES(2,0,2)
+COMMIT
+INSERT INTO TAKEITEM VALUES(3,1,1)
+COMMIT
+INSERT INTO TAKEITEM VALUES(4,1,1)
+COMMIT
+INSERT INTO TAKEITEM VALUES(5,1,1)
+COMMIT
+INSERT INTO TAKEITEM VALUES(6,2,2)
+COMMIT
+INSERT INTO TAKEITEM VALUES(7,2,2)
+COMMIT
+INSERT INTO TAKEITEM VALUES(8,2,2)
+COMMIT
+INSERT INTO TAKEITEM VALUES(9,3,3)
+COMMIT
+INSERT INTO TAKEITEM VALUES(10,3,3)
+COMMIT
+INSERT INTO TAKEITEM VALUES(11,3,2)
+COMMIT
+DISCONNECT
